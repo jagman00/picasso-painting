@@ -10,14 +10,22 @@ body {
 /* Main grid container */
 .thing2 {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto; 
     gap: 10px;
     background-color: brown;
     padding: 20px;
-    height: 600px;
     width: 600px;
+    height: auto;
     z-index: 1;
+}
+/* Styling for grid items */
+.grid-item {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    border: 1px solid #333;
 }
 
 /* Stick element styling */
@@ -28,6 +36,8 @@ body {
     height: 400px;
     justify-content: flex-start;
     align-items: flex-end;
+    position: fixed;
+    left: 0;
 }
 
 /* Submission form positioned at bottom-left of the screen */
